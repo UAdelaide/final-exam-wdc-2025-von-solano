@@ -192,5 +192,5 @@ section {
 }
 
 #username:focus, #password:focus {
-    
+    border-color: #ccc;
 }
