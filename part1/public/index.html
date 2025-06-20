@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Dog Walking Service</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- vue 3 -->
 </head>
+
 <body>
     <div id="app">
         <h1>Dog of the Day</h1>
@@ -23,7 +25,7 @@
         const { createApp } = Vue;
 
         createApp({
-            data(){
+            data() {
                 // data for dog
                 return {
                     dog: {
@@ -37,20 +39,21 @@
             },
             methods: {
                 // function to get dog of the day from api
-                async fetch_dog(){
-                    try{
+                async fetch_dog() {
+                    try {
                         const response = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await response.json();
                         this.dog_image = data.message;
-                    } catch(err){
+                    } catch (err) {
                         console.error('error fetching dog image:', err);
                     }
                 }
             },
-            mounted(){
+            mounted() {
                 this.fetch_dog(); // get dog of the day when page loads
             }
         }).mount('#app');
     </script>
 </body>
+
 </html>
