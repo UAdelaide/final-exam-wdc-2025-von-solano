@@ -173,8 +173,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px auto;
 
+    margin: 10px auto;
+    max-width: 800px;
+    width: 100%;
 }
 
 #login-container form {
