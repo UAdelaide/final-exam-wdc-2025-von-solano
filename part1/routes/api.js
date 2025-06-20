@@ -53,7 +53,9 @@ router.get('/walkers/summary', async (req, res, next) => {
         const db = await mysql.createConnection(db_configuration);
         // get walk request summary
         const [rows] = await db.execute(`
-            SELECT 
+            SELECT Users.username AS walker_username,
+            COUNT
+
         `);
         res.json(rows);
     } catch(err){
