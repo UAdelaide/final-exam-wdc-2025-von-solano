@@ -42,6 +42,7 @@ router.get('/walkrequests/open', async (req, res, next) => {
             JOIN Users ON WalkRequests.owner_id = Users.user_id
             WHERE WalkRequests.status = 'open'
         `);
+        res.json(rows);
     } catch(err){
         res.status(500).json({ error: 'database error.' });
     }
