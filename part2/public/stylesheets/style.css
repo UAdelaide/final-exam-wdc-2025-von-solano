@@ -193,5 +193,5 @@ section {
 
 #username:focus, #password:focus {
     border-color: #ccc;
-    box-shadow: 0 0 3px 3px rgb(244, 244, 244);
+    box-shadow: 0 0 3px 3px rgb(220, 220, 220);
 }
