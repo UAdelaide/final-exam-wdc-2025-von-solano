@@ -190,7 +190,9 @@ function login(){
             const response = JSON.parse(this.responseText);
             alert("Welcome "+response.user.username);
 
-            if(response.user.role === 'owner')
+            if(response.user.role === "owner"){
+                window.location.href = "/owner"
+            }
 
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
