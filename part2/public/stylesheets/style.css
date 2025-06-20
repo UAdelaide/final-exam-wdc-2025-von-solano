@@ -198,6 +198,7 @@ section {
 
 #logout-button {
     background-color: #dc3545;
+    margin: auto;
 }
 
 #logout-button:hover {
