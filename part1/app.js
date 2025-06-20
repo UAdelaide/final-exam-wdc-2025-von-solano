@@ -153,7 +153,7 @@ let db;
         const [ratings_rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
         if (ratings_rows[0].count === 0) {
             await db.execute(`
-                INSERT INTO WalkRatings ()
+                INSERT INTO WalkRatings (request)
                 VALUES
             `);
         }
