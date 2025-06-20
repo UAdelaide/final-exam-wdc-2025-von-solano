@@ -108,6 +108,19 @@ let db;
             `);
         }
 
+        const [request_rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
+        if (request_rows[0].count === 0){
+            await db.execute(`
+                INSERT INTO Dogs (owner_id, name, size)
+                VALUES
+                ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+                ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+                ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Terry', 'small'),
+                ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Michael', 'large'),
+                ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Steven', 'small');
+            `);
+        }
+
 
 
         await db.execute(`
