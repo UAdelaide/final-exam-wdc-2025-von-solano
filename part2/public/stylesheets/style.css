@@ -156,7 +156,8 @@ section {
 }
 
 #centre-body {
-    
+    background-color: grey;
+    width: 80%;
 }
 
 #login-container {
