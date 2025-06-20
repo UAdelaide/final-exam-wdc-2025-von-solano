@@ -59,7 +59,7 @@ router.get('/walkers/summary', async (req, res, next) => {
             COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
             FROM Users
             LEFT JOIN WalkRequests ON WalkRequests.walker_id = Users.user_id AND WalkRequests.status = 'completed'
-            LEFT JOIN WalkRatings ON WalkRatings.request_id = WalkRatings.request_id
+            LEFT JOIN WalkRatings ON WalkRatings.request_id = WalkRequests.request_id
             WHERE Users.role = 'walker' GROUP BY Users.username
         `);
         res.json(rows);
