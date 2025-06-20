@@ -95,7 +95,8 @@
         }
 
         async function loadOwnedDogs(){
-          try{
+          try {
+            const res = awaut fetch('/api/walks/load')
 
           } catch(err){
             error.value = 'Failed to load owned dogs';
