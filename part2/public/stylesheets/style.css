@@ -206,7 +206,6 @@ section {
 .dashboard-header {
     display: flex;
     align-items: center;
-    
 }
 
 #logout-button:hover {
