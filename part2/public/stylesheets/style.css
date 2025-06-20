@@ -159,3 +159,8 @@ section {
     display: flex;
     justify-content: center;
 }
+
+#login-container form {
+    display: flex;
+    flex-direction: column;
+}
