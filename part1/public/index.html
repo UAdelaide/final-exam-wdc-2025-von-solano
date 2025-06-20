@@ -16,7 +16,6 @@
             <p>The Owner's Name: {{ dog.owner_name }}</p>
         </div>
 
-        <!-- get dog of day when button is clicked -->
         <button @click="fetch_dog">Tap here to see dog of the day!</button>
     </div>
 
@@ -47,6 +46,9 @@
                     }
                 }
             },
+            mounted(){
+                this.fetch_dog(); // get dog of the day when page loads
+            }
         }).mount('#app');
     </script>
 </body>
