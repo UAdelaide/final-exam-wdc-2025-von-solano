@@ -69,4 +69,18 @@ router.post('/logout', async (req, res) => {
   });
 });
 
+router.get('/dogs', async (req, res, next) => {
+  try{
+      // get list of dogs and owner names
+      const [rows] = await db.execute(`
+          SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
+          FROM Dogs
+          JOIN Users ON Dogs.owner_id = Users.user_id
+      `);
+      res.json(rows);
+  } catch (err){
+      res.status(500).json({ error: 'database error.' });
+  }
+});
+
 module.exports = router;
