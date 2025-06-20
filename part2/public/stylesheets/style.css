@@ -174,9 +174,9 @@ section {
     justify-content: center;
     align-items: center;
 
-    margin: 10px auto;
+    margin: 40px auto;
     max-width: 800px;
-    width: 100%;
+    width: 80%;
 }
 
 #login-container form {
