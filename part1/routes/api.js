@@ -20,7 +20,7 @@ router.get('/dogs', async (req, res, next) => {
         `);
         res.json(rows);
     } catch (err){
-        res.status(500).json({ error: 'database error. '});
+        res.status(500).json({ error: 'database error.' });
     }
 });
 
