@@ -150,11 +150,12 @@ let db;
             `);
         }
 
-        const [ratings_rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
+        const [ratings_rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
         if (ratings_rows[0].count === 0) {
             await db.execute(`
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
                 VALUES
+                
             `);
         }
 
