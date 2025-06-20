@@ -19,7 +19,9 @@ router.get('/dogs', async (req, res, next) {
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
         res.json(rows);
-    } catch (err)
+    } catch (err){
+        res.status(500).json({ error: 'database error. '});
+    }
 });
 
 module.exports = router;
