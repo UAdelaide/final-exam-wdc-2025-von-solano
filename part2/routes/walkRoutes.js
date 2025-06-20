@@ -64,13 +64,13 @@ router.post('/owned_dogs', async (req, res) => {
   const user = req.session.user;
   if(!user || user.role !== 'owner'){
     return res.status(401).json({ error: 'Access Denied' });
+  }
 
     try {
-      
+      const [rows] = 
     } catch (err){
       res.status(500).json({ error: 'Failed to get owned dogs' });
     }
-  }
 });
 
 module.exports = router;
