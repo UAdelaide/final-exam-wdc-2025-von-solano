@@ -172,7 +172,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 80%;
+    width: 70%;
 }
 
 #username, #password {
