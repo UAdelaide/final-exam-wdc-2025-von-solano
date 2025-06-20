@@ -68,8 +68,8 @@ router.post('/owned_dogs', async (req, res) => {
 
     try {
       const [rows] = await db.query(`
-        SELECT dog_id FROM Dogs
-      `);
+        SELECT dog_id, name FROM Dogs WHERE owner_id = ?
+      `, [user.user_id]);
     } catch (err){
       res.status(500).json({ error: 'Failed to get owned dogs' });
     }
