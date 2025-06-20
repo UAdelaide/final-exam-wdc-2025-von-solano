@@ -9,8 +9,11 @@
 <body>
     <div id="app">
         <h1>Dog of the Day</h1>
-        <div v-if="dog_image && show_details">
+        <div v-if="dog_image">
             <img :src="dog_image" alt="">
+            <div v-if="show_details">
+                
+            </div>
             <p>The Dog's Name: {{ dog.name }}</p>
             <p>The Size of the Dog: {{ dog.size }}</p>
             <p>The Owner's Name: {{ dog.owner_name }}</p>
