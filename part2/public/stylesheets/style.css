@@ -203,11 +203,6 @@ section {
     margin-bottom: 10px;
 }
 
-.dashboard-header {
-    display: flex;
-    align-items: center;
-}
-
 #logout-button:hover {
     background-color: #dc3546c3;
 }
