@@ -217,7 +217,7 @@ function logout(){
     xmlhttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200){
             alert("Logout successful");
-            window.location.href = "/";
+            window.location.href = "/index.html";
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Logout failed");
         }
