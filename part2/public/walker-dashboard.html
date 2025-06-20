@@ -48,12 +48,12 @@
         const error = ref('');
         const user = ref(''); // store user info
 
+        // function to get current user
         async function getCurrentUser(){
           try {
             const res = await fetch('/api/users/me');
             if(!res.ok) throw new Error('User is not logged in.');
             user.value = await res.json();
-
           } catch(err){
             error.value = err.message;
           }
