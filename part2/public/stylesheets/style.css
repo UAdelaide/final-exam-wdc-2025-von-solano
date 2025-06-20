@@ -161,12 +161,12 @@ section {
     padding: 50px;
     align-items: center;
     background-color: rgb(218, 218, 218);
+    border-radius: 16px;
 }
 
 #login-container {
     display: flex;
     justify-content: center;
-    width: 200px;
 }
 
 #login-container form {
