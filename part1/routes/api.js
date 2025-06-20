@@ -48,7 +48,6 @@ router.get('/walkrequests/open', async (req, res, next) => {
     }
 });
 
-
 router.get('/walkers/summary', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
