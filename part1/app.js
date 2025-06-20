@@ -81,6 +81,8 @@ let db;
         `);
 
         // insert data
+        const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
+        if (rows[0].count === 0){
         await db.execute(`
         INSERT INTO Users (username, email, password_hash, role)
         VALUES
@@ -89,7 +91,8 @@ let db;
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('lebronjames', 'lebron@example.com', 'hashed23', 'owner'),
         ('bronnyjames', 'bronny@example.com', 'hashed9', 'walker');
-    `);
+
+    `)};
 
         await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
