@@ -48,6 +48,12 @@
         const error = ref('');
         const user = ref(''); // store user info
 
+        async function getCurrentUser(){
+          try{
+
+          } catch(err)
+        }
+
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
