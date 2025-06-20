@@ -2,10 +2,12 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql2/promise');
 
+// database connection
 const db = {
     host: 'localhost',
     user: 'root',
-    password: ''
+    password: '',
+    database: 'DogWalkService'
 }
 
 router.get('/dogs', function(req, res, next) {
