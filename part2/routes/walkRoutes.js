@@ -59,6 +59,8 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-router.post('/owned_dogs')
+router.post('/owned_dogs', async (req, res) => {
+  
+})
 
 module.exports = router;
