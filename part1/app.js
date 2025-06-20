@@ -49,7 +49,7 @@ let db;
                 email VARCHAR(100) UNIQUE NOT NULL,
                 password_hash VARCHAR(255) NOT NULL,
                 role ENUM('owner', 'walker') NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
             );
     `);
 
@@ -59,7 +59,7 @@ let db;
                 owner_id INT NOT NULL,
                 name VARCHAR(50) NOT NULL,
                 size ENUM('small', 'medium', 'large') NOT NULL,
-                FOREIGN KEY (owner_id) REFERENCES Users(user_id)
+                FOREIGN KEY (owner_id) REFERENCES Users(user_id);
             );
         `);
 
@@ -72,7 +72,7 @@ let db;
                 location VARCHAR(255) NOT NULL,
                 status ENUM('open', 'accepted', 'completed', 'cancelled') DEFAULT 'open',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id)
+                FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id);
             );
         `);
 
