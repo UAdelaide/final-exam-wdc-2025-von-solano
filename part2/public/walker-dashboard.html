@@ -49,9 +49,12 @@
         const user = ref(''); // store user info
 
         async function getCurrentUser(){
-          try{
+          try {
+            const res
 
-          } catch(err)
+          } catch(err){
+            error.value = err.message;
+          }
         }
 
         async function loadWalkRequests() {
