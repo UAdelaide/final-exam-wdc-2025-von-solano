@@ -18,7 +18,12 @@ app.use('/api/users', userRoutes);
 
 // session configuration
 app.use(session({
-    secret: 'dogwalkerservice'
+    secret: 'dogwalkerservice',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure: false
+    }
 }));
 
 // Export the app instead of listening here
