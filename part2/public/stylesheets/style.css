@@ -156,8 +156,10 @@ section {
 }
 
 #centre-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: grey;
-    width: 80%;
 }
 
 #login-container {
