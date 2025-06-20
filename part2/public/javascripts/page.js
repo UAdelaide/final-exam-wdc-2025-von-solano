@@ -218,6 +218,8 @@ function logout(){
         if(this.readyState == 4 && this.status == 200){
             alert("Logout successful");
             window.location.href = "/";
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Logout failed");
         }
     }
 
