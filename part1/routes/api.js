@@ -48,6 +48,6 @@ router.get('/walkrequests/open', async (req, res, next) => {
     }
 });
 
-router.get('/')
+router.get('/walkrequests')
 
 module.exports = router;
