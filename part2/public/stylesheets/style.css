@@ -199,7 +199,7 @@ section {
 #logout-button {
     background-color: #dc3545;
     display: flex;
-    margin-left: auto;
+    float: right;
     margin-bottom: 10px;
 }
 
