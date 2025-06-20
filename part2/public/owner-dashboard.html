@@ -98,8 +98,10 @@
           }
         }
 
+        // function to load dogs
         async function loadOwnedDogs(){
           try {
+            // get request to retireve owned dogs
             const res = await fetch('/api/walks/owned_dogs');
             dogs_owned.value = await res.json();
           } catch(err){
