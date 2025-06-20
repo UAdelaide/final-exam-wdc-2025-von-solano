@@ -83,6 +83,7 @@ let db;
         ('bronnyjames', 'bronny@example.com', 'hashed9', 'walker');
     `);
 
+    // insert dogs 
     await db.execute(`SELECT user_id FROM Users WHERE username = 'alice123'`)
 
     await db.execute(`
