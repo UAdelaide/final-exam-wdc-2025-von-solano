@@ -53,7 +53,7 @@ let db;
             );
     `);
 
-    await db.execute(`
+        await db.execute(`
             CREATE TABLE Dogs (
                 dog_id INT AUTO_INCREMENT PRIMARY KEY,
                 owner_id INT NOT NULL,
@@ -76,8 +76,8 @@ let db;
             );
         `);
 
-    // insert data
-    await db.execute(`
+        // insert data
+        await db.execute(`
         INSERT INTO Users (username, email, password_hash, role)
         VALUES
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
@@ -87,7 +87,7 @@ let db;
         ('bronnyjames', 'bronny@example.com', 'hashed9', 'walker');
     `);
 
-    await db.execute(`
+        await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
         VALUES
         ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
@@ -97,7 +97,7 @@ let db;
         ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Steven', 'small');
     `);
 
-    await db.execute(`
+        await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
         VALUES
         ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
