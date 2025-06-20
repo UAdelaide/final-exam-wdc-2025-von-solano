@@ -191,7 +191,9 @@ function login(){
             alert("Welcome "+response.user.username);
 
             if(response.user.role === "owner"){
-                window.location.href = "/owner"
+                window.location.href = "/owner-dashboard.html";
+            } else if (response.user.role === "walker"){
+
             }
 
         } else if (this.readyState == 4 && this.status >= 400) {
