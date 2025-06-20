@@ -29,7 +29,8 @@ router.get('/walkrequests/open', async (req, res, next) => {
         const db = await mysql.createConnection(db_configuration);
         const [rows] = await db.execute(`
             SELECT WalkRequests.request_id,
-            Dogs.name AS
+            Dogs.name AS dog_name,
+            WalkRequests.request
         `);
 
     } catch(err){
