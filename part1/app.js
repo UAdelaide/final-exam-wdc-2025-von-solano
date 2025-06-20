@@ -157,6 +157,8 @@ let db;
                 VALUES
                 (SELECT request_id FROM WalkRequests WHERE dog_id = (SELECT dog_id FROM Dogs WHERE name = 'Terry')),
                 (SELECT user_id FROM Users WHERE username = 'bronnyjames'),
+                (SELECT user_id FROM Users WHERE username = 'lebronjames'),
+                5,
             `);
         }
 
