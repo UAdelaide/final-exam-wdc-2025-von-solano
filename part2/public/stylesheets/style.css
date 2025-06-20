@@ -166,6 +166,7 @@ section {
 #login-container {
     display: flex;
     justify-content: center;
+    width: ;
 }
 
 #login-container form {
