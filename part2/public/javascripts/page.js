@@ -213,8 +213,8 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function(){
-        
+    xmlhttp.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200)
     }
 
     // Open connection to server & send the post data using a POST request
