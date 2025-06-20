@@ -92,7 +92,8 @@ let db;
         ('lebronjames', 'lebron@example.com', 'hashed23', 'owner'),
         ('bronnyjames', 'bronny@example.com', 'hashed9', 'walker');
 
-    `)};
+        `);
+        }
 
         await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
