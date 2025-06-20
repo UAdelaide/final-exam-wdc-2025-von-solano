@@ -213,10 +213,11 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
+    // successful logout or failure
     xmlhttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200){
             alert("Logout successful");
-            window.location.href = "/owner-dashboard.html";
+            window.location.href = "/";
         }
     }
 
