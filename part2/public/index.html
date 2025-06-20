@@ -40,7 +40,12 @@
           dog_images: {}
         };
       },
-      async mounted
+      async mounted(){
+        await this.load_dogs();
+      },
+      methods: {
+        
+      }
     }).mount('#app');
   </script>
 
