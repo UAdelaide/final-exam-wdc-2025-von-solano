@@ -88,6 +88,19 @@ let db;
         VALUES
         ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
         ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Terry', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Michael', 'large'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Steven', 'small');
+    `);
+
+    await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        VALUES
+        ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+        ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Terry', 'small'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Michael', 'large'),
+        ((SELECT user_id FROM Users WHERE username = 'lebronjames'), 'Steven', 'small');
     `);
 
     } catch (err) {
