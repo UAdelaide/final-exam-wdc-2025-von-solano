@@ -20,9 +20,10 @@
             methods: {
                 async fetch_dog(){
                     try{
-                        const response = await fetch('https://dog.ceo/api/breeds/image/random')
+                        const response = await fetch('https://dog.ceo/api/breeds/image/random');
+                        const data = await response.json();
                     }
-                }
+                },
             }
         }).mount('#app');
     </script>
