@@ -14,7 +14,7 @@ router.get('/dogs', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
         const [rows] = await db.execute(`
-            SELECT Dogs.name, Dogs.size, Users.username
+            SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
