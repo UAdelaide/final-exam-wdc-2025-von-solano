@@ -172,13 +172,14 @@ section {
 #login-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 80%;
 }
 
 #login-container form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 80%;
 }
 
 #username, #password {
