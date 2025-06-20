@@ -66,10 +66,13 @@ router.post('/owned_dogs', async (req, res) => {
     return res.status(401).json({ error: 'Access Denied' });
   }
 
+    // get owner dogs using owner id
     try {
       const [rows] = await db.query(`
         SELECT dog_id, name FROM Dogs WHERE owner_id = ?
       `, [user.user_id]);
+
+      res.json(rows);
     } catch (err){
       res.status(500).json({ error: 'Failed to get owned dogs' });
     }
