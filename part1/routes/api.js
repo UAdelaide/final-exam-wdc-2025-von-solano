@@ -48,6 +48,7 @@ router.get('/walkrequests/open', async (req, res, next) => {
     }
 });
 
+
 router.get('/walkers/summary', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
@@ -56,15 +57,14 @@ router.get('/walkers/summary', async (req, res, next) => {
             SELECT Users.username AS walker_username,
             COUNT(WalkRatings.rating) AS total_ratings,
             AVG(WalkRatings.rating) AS average_rating,
-            COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
+            COUNT(CASE WHEN WalkRequests.status = 'completed' THEN 1 END) AS completed_walks
             FROM Users
-            LEFT JOIN WalkRequests ON WalkRequests.walker_id = Users.user_id AND WalkRequests.status = 'completed'
-            LEFT JOIN WalkRatings ON WalkRatings.request_id = WalkRequests.request_id
+            LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id
+            LEFT JOIN WalkRequests ON WalkRequests.request_id = WalkRatings.request_id
             WHERE Users.role = 'walker' GROUP BY Users.username
         `);
         res.json(rows);
     } catch(err){
-        console.error(err);
         res.status(500).json({ error: 'database error.' });
     }
 });
