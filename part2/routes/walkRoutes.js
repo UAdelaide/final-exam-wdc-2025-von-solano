@@ -64,6 +64,12 @@ router.post('/owned_dogs', async (req, res) => {
   const user = req.session.user;
   if(!user || user.role !== 'owner'){
     return res.status(401).json({ error: 'Access Denied' });
+
+    try {
+
+    } catch (err){
+      res.status(500)
+    }
   }
 });
 
