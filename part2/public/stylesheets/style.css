@@ -159,11 +159,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 
     margin: 40px auto;
     max-width: 800px;
-    width: 80%;
-    padding: 40px;
+    width: 100%;
+    padding: 20px;
+
 }
 
 #login-container form {
