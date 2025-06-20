@@ -59,6 +59,7 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
+// GET request to retreive owned dogs
 router.get('/owned_dogs', async (req, res) => {
   // check if logged in as owner
   const user = req.session.user;
