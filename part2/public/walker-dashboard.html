@@ -70,7 +70,7 @@
           }
         }
 
-        // modified apply walk function to get use user id 
+        // modified apply walk function to use user id retreived from /api/users/me
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
