@@ -11,7 +11,9 @@
         <h1>Dog of the Day</h1>
         <div v-if="dog_image">
             <img :src="dog_image" alt="">
-            <p>{{ dog_name }}</p>
+            <p>{{ dog.name }}</p>
+            <p>{{ dog.name }}</p>
+
         </div>
     </div>
 
@@ -25,9 +27,8 @@
                     dog: {
                         name: 'Timmy',
                         size: 'large',
-                        owner_name: 
-                    }
-
+                        owner_name: 'Alice'
+                    },
                     dog_image: '',
                 };
             },
