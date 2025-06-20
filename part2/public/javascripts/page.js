@@ -190,6 +190,7 @@ function login(){
             const response = JSON.parse(this.responseText);
             alert("Welcome "+response.user.username);
 
+            // check if user is an owner or walker and redirect accordingly
             if(response.user.role === "owner"){
                 window.location.href = "/owner-dashboard.html";
             } else if (response.user.role === "walker"){
