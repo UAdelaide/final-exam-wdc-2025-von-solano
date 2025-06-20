@@ -196,7 +196,9 @@ section {
     width: 15%;
 }
 
-.mb-4 text
+.mb-4 text-primary {
+    margin-bottom: 0px;
+}
 
 #logout-button {
     background-color: #dc3545;
