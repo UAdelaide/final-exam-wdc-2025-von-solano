@@ -26,6 +26,7 @@
                 };
             },
             methods: {
+                // function to get dog of the day from api
                 async fetch_dog(){
                     try{
                         const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -37,7 +38,7 @@
                 }
             },
             mounted(){
-                
+                this.fetch_dog(); // get dog of the day when page loads
             }
         }).mount('#app');
     </script>
