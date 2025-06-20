@@ -13,7 +13,9 @@ const db = {
 router.get('/dogs', function(req, res, next) {
     try{
         const db = await mysql.createConnection(db);
-        const [rows] = 
+        const [rows] = await db.execute(`
+            SELECT Dogs.name
+        `)
     }
 });
 
