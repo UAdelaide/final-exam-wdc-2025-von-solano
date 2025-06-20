@@ -60,8 +60,9 @@ router.post('/:id/apply', async (req, res) => {
 });
 
 router.post('/owned_dogs', async (req, res) => {
-  // check if logged in
+  // check if logged in as owner
   const user = req.session.user;
+  if(!user || )
 });
 
 module.exports = router;
