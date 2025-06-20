@@ -84,13 +84,8 @@ let db;
     `);
 
     await db.execute(`
-        INSERT INTO Users (username, email, password_hash, role)
+        INSERT INTO Dogs (owner_id, name, size)
         VALUES
-        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-        ('lebronjames', 'lebron@example.com', 'hashed23', 'owner'),
-        ('bronnyjames', 'bronny@example.com', 'hashed9', 'walker');
     `);
 
     } catch (err) {
