@@ -196,14 +196,10 @@ section {
     width: 15%;
 }
 
-.mb-4 text-primary {
-    margin-bottom: 0px;
-}
-
 #logout-button {
     background-color: #dc3545;
     display: flex;
-    float: right;
+    margin-left: auto;
     margin-bottom: 10px;
 }
 
