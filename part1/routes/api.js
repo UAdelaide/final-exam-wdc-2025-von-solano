@@ -26,10 +26,12 @@ router.get('/dogs', async (req, res, next) => {
 
 router.get('/walkrequests/open', async (req, res, next) => {
     try{
+        const db = await mysql.createConnection(db_configuration);
+
 
     } catch(err){
-
+        res.status(500).json({ error: 'database error.' });
     }
-})
+});
 
 module.exports = router;
