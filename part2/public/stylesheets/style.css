@@ -173,7 +173,7 @@ section {
 #login-container form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* gap between username and password fields */
     width: 70%;
 }
 
