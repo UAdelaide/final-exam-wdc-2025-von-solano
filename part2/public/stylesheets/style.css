@@ -188,6 +188,9 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     margin-bottom: 10px;
-
     outline: none;
+}
+
+#username:focus, #password:focus {
+    
 }
