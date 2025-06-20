@@ -17,7 +17,9 @@ app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
 // session configuration
-app.use(session({}))
+app.use(session({
+    secret: 'dogwalkerservice'
+}));
 
 // Export the app instead of listening here
 module.exports = app;
