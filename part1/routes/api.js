@@ -12,7 +12,7 @@ const db = {
 
 router.get('/dogs', function(req, res, next) {
     try{
-
+        const db = await mysql.createConnection
     }
 });
 
