@@ -9,7 +9,7 @@
 <body>
     <div id="app">
         <h1>Dog of the Day</h1>
-        <div v-if="dog_image">
+        <div v-if="dog_image && show_details">
             <img :src="dog_image" alt="">
             <p>The Dog's Name: {{ dog.name }}</p>
             <p>The Size of the Dog: {{ dog.size }}</p>
