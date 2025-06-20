@@ -72,6 +72,9 @@ let db;
             );
     `);
 
+    // insert data
+    await.db
+
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
