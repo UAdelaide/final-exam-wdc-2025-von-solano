@@ -24,6 +24,12 @@ router.get('/dogs', async (req, res, next) => {
     }
 });
 
-router.get('/walkrequests/open')
+router.get('/walkrequests/open', async (req, res, next) => {
+    try{
+
+    } catch(err){
+
+    }
+})
 
 module.exports = router;
