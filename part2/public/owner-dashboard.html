@@ -95,7 +95,11 @@
         }
 
         async function loadOwnedDogs(){
-          
+          try{
+
+          } catch(err){
+            error.value = 'Failed to load owned dogs';
+          }
         }
 
         async function submitWalkRequest() {
