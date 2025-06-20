@@ -4,11 +4,12 @@ body {
 }
 
 h1 {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: "Lucida Grande";
 }
 
 p {
   font-size: 50px;
+  font-family: "Verdana";
 }
 
 a {
