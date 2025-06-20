@@ -17,8 +17,9 @@ router.get('/dogs', async (req, res, next) {
             SELECT Dogs.name, Dogs.size, Users.username
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
-        `)
-    }
+        `);
+        res.json(rows);
+    } catch (err)
 });
 
 module.exports = router;
