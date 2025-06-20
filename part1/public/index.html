@@ -23,7 +23,9 @@
                         const response = await fetch('https://dog.ceo/api/breeds/image/random');
                         const data = await response.json();
                     }
-                },
+                } catch(err){
+                    console.error('error fetching dog: ', )
+                }
             }
         }).mount('#app');
     </script>
