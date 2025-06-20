@@ -83,6 +83,8 @@ let db;
         ('bronnyjames', 'bronny@example.com', 'hashed9', 'walker');
     `);
 
+    await db.execute()
+
     await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
         VALUES
