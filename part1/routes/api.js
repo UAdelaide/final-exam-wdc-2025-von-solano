@@ -10,11 +10,12 @@ const db = {
     database: 'DogWalkService'
 }
 
-router.get('/dogs', function(req, res, next) {
+router.get('/dogs', async (req, res, next) {
     try{
         const db = await mysql.createConnection(db);
         const [rows] = await db.execute(`
             SELECT Dogs.name, Dogs.size, Users.username
+            FROM Dogs
         `)
     }
 });
