@@ -66,9 +66,9 @@ router.post('/owned_dogs', async (req, res) => {
     return res.status(401).json({ error: 'Access Denied' });
 
     try {
-
+      
     } catch (err){
-      res.status(500)
+      res.status(500).json({ error: 'Failed to get owned dogs' });
     }
   }
 });
