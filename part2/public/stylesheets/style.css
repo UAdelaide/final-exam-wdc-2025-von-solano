@@ -160,6 +160,7 @@ section {
     justify-content: center;
     align-items: center;
 
+    max-width: 750px;
     padding: 50px;
     border-radius: 16px;
 
