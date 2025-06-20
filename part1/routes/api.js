@@ -33,6 +33,8 @@ router.get('/walkrequests/open', async (req, res, next) => {
             WalkRequests.requested_time,
             WalkRequests.duration_minutes,
             WalkRequests.location,
+            Users.username AS owner_username,
+            
 
         `);
 
