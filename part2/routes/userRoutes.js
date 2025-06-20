@@ -70,4 +70,20 @@ router.post('/logout', async (req, res) => {
   });
 });
 
+// GET dogs
+router.get('/dogs', async (req, res, next) => {
+  try{
+      const db = await mysql.createConnection(db_configuration);
+      // get list of dogs and owner names
+      const [rows] = await db.execute(`
+          SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
+          FROM Dogs
+          JOIN Users ON Dogs.owner_id = Users.user_id
+      `);
+      res.json(rows);
+  } catch (err){
+      res.status(500).json({ error: 'database error.' });
+  }
+});
+
 module.exports = router;
