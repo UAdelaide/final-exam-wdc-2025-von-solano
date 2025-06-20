@@ -177,6 +177,7 @@ section {
     width: 70%;
 }
 
+/* styling username password input fields */
 #username, #password {
     width: 100%;
     padding: 10px;
