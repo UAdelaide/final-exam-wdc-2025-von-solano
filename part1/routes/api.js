@@ -10,7 +10,7 @@ const db = {
     database: 'DogWalkService'
 }
 
-router.get('/dogs', async (req, res, next) {
+router.get('/dogs', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db);
         const [rows] = await db.execute(`
