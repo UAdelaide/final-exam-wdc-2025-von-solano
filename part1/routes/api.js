@@ -53,7 +53,7 @@ router.get('/walkers/summary', async (req, res, next) => {
         const db = await mysql.createConnection(db_configuration);
         // get walk request summary
         const [rows] = await db.execute(`
-
+            
         `);
     } catch(err){
         res.status(500).json({ error: 'database error.' });
