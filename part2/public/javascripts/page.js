@@ -1,4 +1,3 @@
-const session = require('express-session');
 var posts = [];
 var search = null;
 
