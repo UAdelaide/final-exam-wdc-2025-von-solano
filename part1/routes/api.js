@@ -48,6 +48,12 @@ router.get('/walkrequests/open', async (req, res, next) => {
     }
 });
 
-router.get('/walkrequests')
+router.get('/walkrequests', async (req, res, next) => {
+    try{
+
+    } catch(err){
+
+    }
+})
 
 module.exports = router;
