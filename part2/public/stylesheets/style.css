@@ -213,7 +213,9 @@ section {
     border-collapse: collapse;
 }
 
-#dog_table th,  {
-
+#dog_table th, #dogtable td {
+    padding: 12px;
+    text-align: center;
+    
 }
 
