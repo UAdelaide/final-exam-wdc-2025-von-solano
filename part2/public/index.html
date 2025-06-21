@@ -50,7 +50,9 @@
             const data = await res.json();
             this.dogs = data;
 
-            for(let i = 0; i < this.dogs.length)
+            for(let i = 0; i < this.dogs.length; i++){
+              const img_res = await fetch()
+            }
 
           } catch (err){
             console.error("Error loading dogs:", err);
