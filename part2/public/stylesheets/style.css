@@ -209,7 +209,7 @@ section {
 
 #dog_image {
     width: 150x;
-    width: 150x;
-
+    height: 150x;
+    object-fit: cover;
 }
 
