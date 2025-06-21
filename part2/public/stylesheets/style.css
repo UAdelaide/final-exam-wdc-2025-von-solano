@@ -196,6 +196,7 @@ section {
     width: 15%;
 }
 
+/* styling logout button */
 #logout-button {
     background-color: #dc3545;
     display: flex;
