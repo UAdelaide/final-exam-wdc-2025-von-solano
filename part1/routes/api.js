@@ -21,6 +21,7 @@ router.get('/dogs', async (req, res, next) => {
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
+        // return json
         res.json(rows);
     } catch (err){
         res.status(500).json({ error: 'database error.' });
@@ -30,6 +31,7 @@ router.get('/dogs', async (req, res, next) => {
 // GET request to get open walk requests
 router.get('/walkrequests/open', async (req, res, next) => {
     try {
+        // create database connection
         const db = await mysql.createConnection(db_configuration);
         // get walk request details which are open
         const [rows] = await db.execute(`
@@ -54,6 +56,7 @@ router.get('/walkrequests/open', async (req, res, next) => {
 // GET request to summarise walker stats
 router.get('/walkers/summary', async (req, res, next) => {
     try {
+        // create database connection
         const db = await mysql.createConnection(db_configuration);
         // get walk request summary
         const [rows] = await db.execute(`
