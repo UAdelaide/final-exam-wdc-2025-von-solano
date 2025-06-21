@@ -189,7 +189,6 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
             alert("Welcome "+response.user.username);
-
             // check if user is an owner or walker and redirect accordingly
             if(response.user.role === "owner"){
                 window.location.href = "/owner-dashboard.html";
