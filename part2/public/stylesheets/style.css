@@ -226,7 +226,7 @@ section {
 .dog-table thead {
     background-color: #fdfdfd;
     color: black;
-    text-transform: uppercase;
+    text-transform: uppercase; /* uppercase headings */
 }
 
 .dog-table th,
