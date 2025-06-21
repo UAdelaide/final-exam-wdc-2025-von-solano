@@ -54,7 +54,7 @@
             const res = await fetch('/api/users/me'); // get current logged in user using session
             if(!res.ok) throw new Error('User is not logged in.');
             user.value = await res.json();
-            console.log("current user: ", user.value);
+            console.log("current user: ", user.value); // check which user logged in
           } catch(err){
             error.value = err.message;
           }
@@ -76,7 +76,7 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user.value.user_id }) // fixed
+              body: JSON.stringify({ walker_id: user.value.user_id }) // fixed: uses dynamic walker id
             });
             const result = await res.json();
 
