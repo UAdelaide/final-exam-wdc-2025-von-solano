@@ -14,11 +14,13 @@
             <img :src="dog_image" alt="">
             <p>Dog Details: Click The Button!</p>
             <div v-if="show_details">
+                <!-- show dog details -->
                 <p>The Dog's Name: {{ dog.name }}</p>
                 <p>The Size of the Dog: {{ dog.size }}</p>
                 <p>The Owner's Name: {{ dog.owner_name }}</p>
             </div>
         </div>
+        <
         <button @click="show_details = true">Show the details of the dog of the day!</button>
     </div>
     <script>
