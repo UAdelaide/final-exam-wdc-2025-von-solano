@@ -235,10 +235,12 @@ section {
     text-align: center;
 }
 
+/* different colour for alternating rows */
 .dog-table tbody tr:nth-child(odd){
     background-color: #f4f4f4;
 }
 
+/* constant sizing of dog images */
 #dog-image{
     width: 200px;
     height: 200px;
