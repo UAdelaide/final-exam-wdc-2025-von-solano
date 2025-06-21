@@ -51,7 +51,7 @@
         // function to get current user instead of hard coding
         async function getCurrentUser(){
           try {
-            const res = await fetch('/api/users/me');
+            const res = await fetch('/api/users/me'); // get current logged in user using session
             if(!res.ok) throw new Error('User is not logged in.');
             user.value = await res.json();
             console.log("current user: ", user.value);
