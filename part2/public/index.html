@@ -67,6 +67,7 @@
         await this.load_dogs(); // load dogs
       },
       methods: {
+        // function to get list of all dogs
         async load_dogs(){
           try {
             const res = await fetch('/api/users/dogs');
