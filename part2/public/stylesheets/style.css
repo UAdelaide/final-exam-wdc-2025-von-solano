@@ -219,6 +219,8 @@ section {
 .dog-table thead {
     background-color: #ababab;
     color: black;
-    
+    text-transform: uppercase;
 }
+
+.dog-table
 
