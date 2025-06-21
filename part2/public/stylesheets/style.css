@@ -229,6 +229,6 @@ section {
 }
 
 .dog-table tbody tr:nth-child(odd){
-    background-color: #d0d0d0;
+    background-color: #eeeded;
 }
 
