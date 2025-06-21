@@ -207,15 +207,4 @@ section {
     background-color: #dc3546c3;
 }
 
-#dog_table{
-    margin: 0 auto;
-    width: 80%;
-    border-collapse: collapse;
-}
-
-#dog_table th, #dogtable td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
 
