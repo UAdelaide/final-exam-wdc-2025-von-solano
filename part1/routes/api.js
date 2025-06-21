@@ -68,7 +68,7 @@ router.get('/walkers/summary', async (req, res, next) => {
             LEFT JOIN WalkRequests ON WalkRequests.request_id = WalkRatings.request_id
             WHERE Users.role = 'walker' GROUP BY Users.username
         `);
-        res.json(rows); // return list of dogs
+        res.json(rows); // return list of walker summary
     } catch(err){
         res.status(500).json({ error: 'database error.' });
     }
