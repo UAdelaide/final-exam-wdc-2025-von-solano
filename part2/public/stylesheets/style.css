@@ -210,6 +210,10 @@ section {
 #dog_table{
     margin: 0 auto;
     width: 80%;
-    border-collapse: ;
+    border-collapse: collapse;
+}
+
+#dog_table th,  {
+
 }
 
