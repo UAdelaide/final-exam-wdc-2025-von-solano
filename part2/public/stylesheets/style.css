@@ -222,5 +222,9 @@ section {
     text-transform: uppercase;
 }
 
-.dog-table
+.dog-table th,
+.dog-table td {
+    padding: 15px;
+    text-align: center;
+}
 
