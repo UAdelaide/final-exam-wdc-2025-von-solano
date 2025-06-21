@@ -71,7 +71,7 @@
         // function to get list of all dogs
         async load_dogs(){
           try {
-            const res = await fetch('/api/users/dogs');
+            const res = await fetch('/api/users/dogs'); // fetches list of dogs
             const data = await res.json();
             this.dogs = data;
 
