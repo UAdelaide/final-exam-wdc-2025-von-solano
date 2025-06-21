@@ -216,6 +216,6 @@ section {
 #dog_table th, #dogtable td {
     padding: 12px;
     text-align: center;
-    
+    border: 1px solid #ccc;
 }
 
