@@ -71,7 +71,7 @@ router.post('/logout', async (req, res) => {
   });
 });
 
-// GET dogs
+// GET dogs from part 1
 router.get('/dogs', async (req, res, next) => {
   try{
       // get list of dogs and owner names
