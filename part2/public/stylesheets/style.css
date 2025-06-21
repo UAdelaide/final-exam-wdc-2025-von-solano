@@ -212,6 +212,11 @@ section {
     margin: 30px auto;
     border-collapse: collapse;
     background-color: #ffffff;
-    border-radius: ;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dog-table thead {
+    background-color: #007bff;
 }
 
