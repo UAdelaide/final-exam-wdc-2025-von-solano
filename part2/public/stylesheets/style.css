@@ -228,5 +228,7 @@ section {
     text-align: center;
 }
 
-.dog-table tbody tr
+.dog-table tbody tr:nth-child(odd){
+    background-color: #d0d0d0;
+}
 
