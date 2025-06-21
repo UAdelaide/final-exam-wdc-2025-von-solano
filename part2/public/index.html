@@ -76,7 +76,7 @@
 
             for(let i = 0; i < this.dogs.length; i++){
               const img_res = await fetch('https://dog.ceo/api/breeds/image/random');
-              const imd_data = await img_res.json();
+              const img_data = await img_res.json();
               this.dog_images[i] = img_data.message;
             }
           } catch (err){
