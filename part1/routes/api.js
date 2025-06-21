@@ -59,7 +59,7 @@ router.get('/walkers/summary', async (req, res, next) => {
         const db = await mysql.createConnection(db_configuration);
         /*
         get walk request summary... counts ratings, averages walk ratings, and
-
+        counts each walkers completed walks
         */
         const [rows] = await db.execute(`
             SELECT Users.username AS walker_username,
