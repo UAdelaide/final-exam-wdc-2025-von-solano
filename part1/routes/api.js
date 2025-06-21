@@ -10,6 +10,7 @@ const db_configuration = {
     database: 'DogWalkService'
 };
 
+// GET request to get all dogs
 router.get('/dogs', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
@@ -25,6 +26,7 @@ router.get('/dogs', async (req, res, next) => {
     }
 });
 
+// GET request to get 
 router.get('/walkrequests/open', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
