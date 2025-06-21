@@ -12,7 +12,8 @@ const db_configuration = {
 
 // GET request to get all dogs
 router.get('/dogs', async (req, res, next) => {
-    try{
+    try {
+        // create database connection
         const db = await mysql.createConnection(db_configuration);
         // get list of dogs and owner names
         const [rows] = await db.execute(`
@@ -28,7 +29,7 @@ router.get('/dogs', async (req, res, next) => {
 
 // GET request to get open walk requests
 router.get('/walkrequests/open', async (req, res, next) => {
-    try{
+    try {
         const db = await mysql.createConnection(db_configuration);
         // get walk request details which are open
         const [rows] = await db.execute(`
@@ -52,7 +53,7 @@ router.get('/walkrequests/open', async (req, res, next) => {
 
 // GET request to summarise walker stats
 router.get('/walkers/summary', async (req, res, next) => {
-    try{
+    try {
         const db = await mysql.createConnection(db_configuration);
         // get walk request summary
         const [rows] = await db.execute(`
