@@ -21,8 +21,7 @@ router.get('/dogs', async (req, res, next) => {
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
-        // return json
-        res.json(rows);
+        res.json(rows); // return list of dogs
     } catch (err){
         res.status(500).json({ error: 'database error.' });
     }
@@ -47,7 +46,7 @@ router.get('/walkrequests/open', async (req, res, next) => {
             JOIN Users ON Dogs.owner_id = Users.user_id
             WHERE WalkRequests.status = 'open'
         `);
-        res.json(rows);
+        res.json(rows); // return list open walk requests
     } catch(err){
         res.status(500).json({ error: 'database error.' });
     }
@@ -69,7 +68,7 @@ router.get('/walkers/summary', async (req, res, next) => {
             LEFT JOIN WalkRequests ON WalkRequests.request_id = WalkRatings.request_id
             WHERE Users.role = 'walker' GROUP BY Users.username
         `);
-        res.json(rows);
+        res.json(rows); // return list of dogs
     } catch(err){
         res.status(500).json({ error: 'database error.' });
     }
