@@ -40,7 +40,7 @@ router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // query database for correct username
+    // get user_id, username, and role from username and password login credentials
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
