@@ -26,7 +26,7 @@ router.get('/dogs', async (req, res, next) => {
     }
 });
 
-// GET request to get 
+// GET request to get open walk requests
 router.get('/walkrequests/open', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
@@ -50,6 +50,7 @@ router.get('/walkrequests/open', async (req, res, next) => {
     }
 });
 
+// GET request to summarise walker stats
 router.get('/walkers/summary', async (req, res, next) => {
     try{
         const db = await mysql.createConnection(db_configuration);
