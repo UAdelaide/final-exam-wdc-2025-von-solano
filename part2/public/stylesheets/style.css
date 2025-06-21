@@ -233,7 +233,7 @@ section {
 }
 
 .dog-table tbody tr:nth-child(odd){
-    background-color: #eeeded;
+    background-color: #f4f4f4;
 }
 
 #dog-image{
