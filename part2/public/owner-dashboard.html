@@ -23,7 +23,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Select Your Dog</label>
-            <!-- loop for dogs owned in for dropdown menu -->
+            <!-- loop for dogs owned names for dropdown menu -->
             <select v-model="form.dog_id" class="form-control" required>
               <option v-for="dog in dogs_owned" :value="dog.dog_id" :key="dog.dog_id">
               {{ dog.name }}
