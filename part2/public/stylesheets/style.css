@@ -210,6 +210,8 @@ section {
 .dog-table {
     width: 100%;
     margin: 30px auto;
-    
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: ;
 }
 
